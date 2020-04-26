@@ -1,5 +1,2 @@
-[databaseservers]
 server1.lab.example.com
-
-[webservers]
 server2.lab.example.com
