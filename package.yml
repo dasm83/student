@@ -1,0 +1,15 @@
+---
+- name: Install package 
+  hosts: servera.lab.example.com
+  
+  tasks:
+  
+    - name: Install package selected
+      yum:
+        name: "{{ package }}"
+        state: installed
+      register: result
+      
+    - name: Show package installed
+      debug:
+        msg: The package installed was {{ result.stdout }}
