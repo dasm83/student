@@ -8,8 +8,8 @@
       yum:
         name: "{{ package }}"
         state: installed
-      register: result
+      register: package_result
       
     - name: Show package installed
       debug:
-        msg: The package installed was {{ result.stdout }}
+        msg: "The package installed was {{ package_result.stdout }}"
