@@ -12,4 +12,4 @@
       
     - name: Show package installed
       debug:
-        msg: "The package installed was {{ package_result.stdout }}"
+        var: package_result
