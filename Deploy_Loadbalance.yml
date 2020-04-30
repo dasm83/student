@@ -1,0 +1,14 @@
+---
+- name: Deploy Load Balance
+  hosts: serverb.lab.example.com
+  tasks:
+    - name: Install Load Balance
+      yum:
+        name: nginx
+        status: installed
+
+    - name: Start the nginx service
+	    service: 
+	    name: nginx
+        state: started
+        enabled: true
