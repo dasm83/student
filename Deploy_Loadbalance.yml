@@ -5,10 +5,10 @@
     - name: Install Load Balance
       yum:
         name: nginx
-        status: installed
+        state: installed
 
     - name: Start the nginx service
-	    service: 
-	    name: nginx
+      service: 
+	name: nginx
         state: started
         enabled: true
