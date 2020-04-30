@@ -1,6 +1,8 @@
 ---
 - name: Deploy Load Balance
   hosts: serverb.lab.example.com
+  become: true
+  become_method: sudo
   tasks:
     - name: Install Load Balance
       yum:
