@@ -9,13 +9,13 @@
 
     - name: Start the firewalld service
       service: 
-	name: firewalld
+        name: firewalld
         state: started
         enabled: true
 
     - name: Configure the firewall
       firewalld: 
-	service: “{{ item }}” 
+        service: “{{ item }}” 
         state: enabled
         permanent: true
 	immediate: true
