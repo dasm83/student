@@ -7,8 +7,9 @@
         name: httpd
         state: installed
 
-    - name: Start the nginx service
+    - name: Start the apache service
       service: 
         name: httpd
         state: started
         enabled: true
+    
