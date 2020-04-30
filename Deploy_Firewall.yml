@@ -5,20 +5,20 @@
     - name: Install Firewall
       yum:
         name: firewalld
-        status: installed
+        state: installed
 
     - name: Start the firewalld service
-	    service: 
-	      name: firewalld
+      service: 
+	name: firewalld
         state: started
         enabled: true
 
     - name: Configure the firewall
-	    firewalld: 
-	      service: “{{ item }}” 
+      firewalld: 
+	service: “{{ item }}” 
         state: enabled
         permanent: true
-	      immediate: true
-	    loop:
+	immediate: true
+      loop:
         - http
         - https
