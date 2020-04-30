@@ -5,7 +5,7 @@
     - name: Install mariadb server
       yum:
         name: mariadb-server
-        status: installed
+        state: installed
 
     - name: Start the database service
       service: 
