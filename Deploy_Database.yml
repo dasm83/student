@@ -9,6 +9,6 @@
 
     - name: Start the database service
       service: 
-	name: mariadb
+        name: mariadb
         state: started
         enabled: true
