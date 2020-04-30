@@ -4,11 +4,11 @@
   tasks:
     - name: Install Load Balance
       yum:
-        name: nginx
+        name: httpd
         state: installed
 
     - name: Start the nginx service
       service: 
-        name: nginx
+        name: httpd
         state: started
         enabled: true
