@@ -5,10 +5,10 @@
     - name: Install Web Server
       yum:
         name: httpd
-        status: installed
+        state: installed
 
     - name: Start the httpd service
-	    service: 
-	      name: httpd
+      service: 
+        name: httpd
         state: started
         enabled: true
