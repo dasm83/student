@@ -8,7 +8,7 @@
         status: installed
 
     - name: Start the database service
-	    service: 
-	      name: mariadb
+      service: 
+	name: mariadb
         state: started
         enabled: true
