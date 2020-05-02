@@ -9,4 +9,4 @@
         dest: /usr/local/apache-tomcat-9.0.34/webapps
         owner: tomcat
         group: tomcat
-        mode: 0750
+        mode: '0755'
