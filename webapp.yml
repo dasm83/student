@@ -7,3 +7,5 @@
       copy:
         src: /opt/tomcat/webapp/target/webapp.war
         dest: /usr/local/apache-tomcat-9.0.34/webapps
+        owner: tomcat
+        group: tomcat
