@@ -1,16 +1,17 @@
 --- 
 - name: Playbook to install and configure Tomcat 9
-  hosts: workstation.lab.example.com
+  hosts: serverb.lab.example.com
   become: true
   tasks:
 
-#    - name: Install packages package
-#      yum:
-#        name: "{{ item }}"
-#        state: present
-#      loop:
-#        - java
-#        - firewalld
+    - name: Install packages package
+      yum:
+        name: "{{ item }}"
+        state: present
+      loop:
+        - java
+        - firewalld
+        - wget
 
     - name: Download and unarchive Tomcat from the sources
       unarchive:
