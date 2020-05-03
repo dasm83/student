@@ -4,13 +4,13 @@
   become: true
   tasks:
 
-    - name: Install packages package
-      yum:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - java
-        - firewalld
+#    - name: Install packages package
+#      yum:
+#        name: "{{ item }}"
+#        state: present
+#      loop:
+#        - java
+#        - firewalld
 
     - name: Download and unarchive Tomcat from the sources
       unarchive:
