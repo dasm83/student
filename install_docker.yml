@@ -9,8 +9,7 @@
       debug:
         msg: "Docker is installed"
       when: "'docker' in ansible_facts.packages"
-                                
-                                    
+                                                              
     - name: Install Docker 
       command: "{{ item }}"
       loop:
