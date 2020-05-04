@@ -12,12 +12,12 @@
     - name: Validate if Docker if installed
       debug:
         msg: "Docker is installed"
-      when: "'httpd' in ansible_facts.packages"
+      when: "'docker' in ansible_facts.packages"
                                                               
-    #- name: Install Docker 
-     # command: "{{ item }}"
-      #loop:
-       # - sudo yum install -y yum-utils
-        #- sudo yum config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-        #- sudo yum install docker-ce docker-ce-cli containerd.io
-      #when: "'docker' not in ansible_facts.packages"
+    - name: Install Docker 
+      command: "{{ item }}"
+      loop:
+        - sudo yum install -y yum-utils
+        - sudo yum config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+        - sudo yum install docker-ce docker-ce-cli containerd.io
+      when: "'docker' not in ansible_facts.packages"
