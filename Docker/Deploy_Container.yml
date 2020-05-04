@@ -9,7 +9,7 @@
       file:
       	path: /opt/docker
 	state: directory
-		
+	
     - name: Copy Dockerfile file 
       copy:
 	src: Dockerfile
