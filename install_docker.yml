@@ -2,10 +2,12 @@
 - name: Install Docker 
   hosts: servera.lab.example.com
   become: true
-  package_facts:
-    manager: "auto"
-      
+    
   tasks:
+  
+    - name: Scan for the packages
+      package_facts:
+        manager: "auto"
           
     - name: Validate if Docker if installed
       debug:
