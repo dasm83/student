@@ -25,7 +25,7 @@
 	name: centos 
 		
     - name: Create a web image
-	docker_image:
+      docker_image:
 	path: /opt/docker
 	name: web_image
 	  
