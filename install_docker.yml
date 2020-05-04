@@ -14,10 +14,20 @@
         msg: "Docker is installed"
       when: "'docker' in ansible_facts.packages"
                                                               
-    - name: Install Docker 
+    - name: Configure Docker repositories 
       command: "{{ item }}"
       loop:
         - sudo yum install -y yum-utils
         - sudo yum-config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
-        - sudo yum install docker-ce docker-ce-cli containerd.io
+      register: this
       when: "'docker' not in ansible_facts.packages"
+      
+    - name: Install Docker
+      yum:
+        name: "{{ item }}"
+        state: installed
+      loop:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+      when: this.changed
